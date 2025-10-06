@@ -1,43 +1,101 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seite offline</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            max-width: 500px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .note {
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garnelen Guide – Wartungsmodus</title>
+<meta name="description" content="Die Webseite Garnelen Guide befindet sich derzeit im Wartungsmodus. Besuchen Sie uns später für Tipps und Informationen rund um Garnelen.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #00b09b, #96c93d);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background-image: url('garnelen-bg.jpg'); /* Hintergrundbild hochladen */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        max-width: 600px;
+        padding: 30px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        backdrop-filter: blur(5px);
+        animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {opacity:0; transform: translateY(-20px);}
+        to {opacity:1; transform: translateY(0);}
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #ffd700;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .note {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    .logo {
+        width: 100px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+
+    .shrimp {
+        width: 80px;
+        margin: 15px auto;
+        display: block;
+        animation: swim 3s infinite ease-in-out;
+    }
+
+    @keyframes swim {
+        0% { transform: translateX(0) rotate(0deg);}
+        50% { transform: translateX(15px) rotate(10deg);}
+        100% { transform: translateX(0) rotate(0deg);}
+    }
+
+    @media (max-width: 500px) {
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Seite vorübergehend offline</h1>
-        <p>Unsere Webseite wird derzeit gewartet.<br>Bitte versuchen Sie es später erneut.</p>
-        <p class="note">Vielen Dank für Ihr Verständnis.</p>
-    </div>
+<div class="container">
+    <!-- Logo hochladen als logo.png -->
+    <img src="logo.png" alt="Garnelen Guide Logo" class="logo">
+    <h1>Garnelen Guide</h1>
+    <p>Unsere Webseite befindet sich derzeit im Wartungsmodus.<br>Wir sind bald wieder für Sie da!</p>
+    
+    <!-- Animierte Garnelen SVG -->
+    <svg class="shrimp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <path fill="#fff" d="M32 2c-4 0-7 3-7 7s3 7 7 7 7-3 7-7-3-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0 5c-7 0-13 5-13 12v5h26v-5c0-7-6-12-13-12zm-8 12c0-4 4-8 8-8s8 4 8 8v3H24v-3z"/>
+    </svg>
+
+    <p class="note">Vielen Dank für Ihr Verständnis.</p>
+</div>
 </body>
 </html>
