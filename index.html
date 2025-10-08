@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garnelen Guide – Wartungsmodus</title>
-  <meta name="description" content="Der Garnelen Guide befindet sich derzeit im Wartungsmodus. Bald findest du hier wieder spannende Inhalte rund um Garnelen und Nano-Aquaristik.">
-  <meta name="robots" content="noindex, follow">
+  <title>Garnelen Guide – Tipps & Wartungsmodus</title>
+  <meta name="description" content="Der Garnelen Guide befindet sich derzeit im Wartungsmodus. Schon jetzt findest du hier erste Tipps für Anfänger und eine nützliche Ausrüstungsliste für dein Garnelen-Aquarium.">
+  <meta name="robots" content="index, follow">
   <link rel="icon" href="logo.png" type="image/png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -18,7 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      overflow-x: hidden;
       color: #103b57;
     }
 
@@ -37,25 +37,29 @@
 
     .container {
       position: relative;
-      text-align: center;
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.8);
       border-radius: 20px;
-      padding: 40px 30px;
-      max-width: 600px;
+      padding: 30px 25px;
+      max-width: 800px;
       width: 90%;
       box-shadow: 0 8px 25px rgba(0,0,0,0.1);
       backdrop-filter: blur(8px);
       z-index: 2;
+      margin: 40px 0;
     }
 
     .logo {
       width: 150px;
       border-radius: 0;
       margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h1 {
       font-size: 2.5rem;
+      text-align: center;
       margin: 10px 0;
       color: #c8342b;
     }
@@ -63,12 +67,31 @@
     p {
       font-size: 1.1rem;
       color: #103b57;
-      margin-bottom: 1.5rem;
+      text-align: center;
     }
 
-    .note {
-      font-size: 0.9rem;
-      opacity: 0.8;
+    section {
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #c8342b;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: rgba(255,255,255,0.6);
+      padding: 8px 12px;
+      margin: 6px 0;
+      border-left: 4px solid #c8342b;
+      border-radius: 8px;
+      font-size: 1rem;
     }
 
     footer {
@@ -76,18 +99,40 @@
       color: #0e3a56;
       margin-top: 30px;
       opacity: 0.7;
+      text-align: center;
     }
 
-    /* Blasen generieren */
+    .cta {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #c8342b;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #a92921;
+    }
+
+    /* Blasen */
     .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
     .bubble:nth-child(2) { width: 25px; height: 25px; left: 30%; animation-delay: 2s; }
     .bubble:nth-child(3) { width: 35px; height: 35px; left: 50%; animation-delay: 4s; }
     .bubble:nth-child(4) { width: 20px; height: 20px; left: 70%; animation-delay: 1s; }
     .bubble:nth-child(5) { width: 45px; height: 45px; left: 85%; animation-delay: 3s; }
 
-    @media (max-width: 500px) {
-      h1 { font-size: 1.8rem; }
-      p { font-size: 1rem; }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.3rem; }
+      p, ul li { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -100,11 +145,39 @@
 
   <div class="container">
     <img src="logo.png" alt="Garnelen Guide Logo" class="logo">
-    <h1>Wir sind bald zurück!</h1>
-    <p>Der <strong>Garnelen Guide</strong> befindet sich momentan im Wartungsmodus.<br>
-       Bald findest du hier wieder Tipps & Inspirationen rund um Garnelen, Aquaristik & Nano-Welten.</p>
-    <p class="note">Danke für dein Verständnis und deine Geduld 🦐</p>
-    <footer>© 2025 Garnelen Guide – Alles über Nano-Garnelen & Aquaristik</footer>
+    <h1>Garnelen Guide</h1>
+    <p>Wir bauen für dich eine moderne Plattform rund um Nano-Garnelen & Aquaristik.<br>
+    Bis dahin findest du hier schon erste Tipps 🦐✨</p>
+
+    <section>
+      <h2>🐣 Tipps für Anfänger</h2>
+      <ul>
+        <li>Starte mit einem kleinen Aquarium (20–30 L) – einfacher zu pflegen.</li>
+        <li>Verwende ein geeignetes Bodensubstrat und feine Filterung.</li>
+        <li>Wasserqualität ist entscheidend – teste regelmäßig pH & Nitrit.</li>
+        <li>Garnelen lieben Verstecke: Pflanzen, Wurzeln und Moose sind perfekt.</li>
+        <li>Langsam besetzen – weniger ist am Anfang mehr.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧰 Grundausstattung (Equipment)</h2>
+      <ul>
+        <li>✔ Nano-Aquarium (20–30 Liter)</li>
+        <li>✔ Filter & Heizer (niedrige Leistung)</li>
+        <li>✔ Bodengrund / Soil</li>
+        <li>✔ Wasseraufbereiter & Teststreifen</li>
+        <li>✔ Pflanzen, Moos, Dekoration</li>
+        <li>✔ Futter speziell für Garnelen</li>
+        <li>✔ Licht mit Zeitschaltuhr</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <a href="mailto:info@garnelen-guide.de">📬 Infos & Updates abonnieren</a>
+    </div>
+
+    <footer>© 2025 Garnelen Guide – Dein Ratgeber für Nano-Garnelen & Aquaristik</footer>
   </div>
 </body>
 </html>
