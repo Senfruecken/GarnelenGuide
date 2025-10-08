@@ -7,16 +7,9 @@
   <meta name="description" content="Der Garnelen Guide befindet sich derzeit im Wartungsmodus. Schon jetzt findest du hier erste Tipps für Anfänger und eine nützliche Ausrüstungsliste für dein Garnelen-Aquarium.">
   <meta name="robots" content="index, follow">
   <link rel="icon" href="logo.png" type="image/png">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Garnelen Guide – Ratgeber für Garnelen & Nano-Aquaristik">
-  <meta property="og:description" content="Tipps, Ausrüstung und Anleitungen für dein Garnelen-Aquarium.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.garnelen-guide.de/">
-  <meta property="og:image" content="logo.png">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -28,39 +21,133 @@
       overflow-x: hidden;
       color: #103b57;
     }
-    .bubble {position:absolute;bottom:-50px;background:rgba(255,255,255,0.4);border-radius:50%;animation:rise 10s infinite ease-in;}
-    @keyframes rise {0%{transform:translateY(0) scale(1);}100%{transform:translateY(-120vh) scale(1.2);}}
-    .container {position:relative;background:rgba(255,255,255,0.8);border-radius:20px;padding:30px 25px;max-width:800px;width:90%;box-shadow:0 8px 25px rgba(0,0,0,0.1);backdrop-filter:blur(8px);z-index:2;margin:40px 0;}
-    .logo {width:150px;border-radius:0;margin-bottom:15px;display:block;margin-left:auto;margin-right:auto;}
-    h1 {font-size:2.5rem;text-align:center;margin:10px 0;color:#c8342b;}
-    p {font-size:1.1rem;color:#103b57;text-align:center;}
-    section {margin-top:30px;}
-    h2 {color:#c8342b;font-size:1.6rem;margin-bottom:10px;}
-    ul {list-style:none;padding:0;}
-    ul li {background:rgba(255,255,255,0.6);padding:8px 12px;margin:6px 0;border-left:4px solid #c8342b;border-radius:8px;font-size:1rem;}
-    footer {font-size:0.8rem;color:#0e3a56;margin-top:30px;opacity:0.7;text-align:center;}
-    .cta {margin-top:20px;text-align:center;}
-    .cta a {display:inline-block;background:#c8342b;color:#fff;text-decoration:none;padding:10px 20px;border-radius:8px;font-weight:600;transition:0.3s ease;}
-    .cta a:hover {background:#a92921;}
-    .bubble:nth-child(1){width:40px;height:40px;left:10%;animation-delay:0s;}
-    .bubble:nth-child(2){width:25px;height:25px;left:30%;animation-delay:2s;}
-    .bubble:nth-child(3){width:35px;height:35px;left:50%;animation-delay:4s;}
-    .bubble:nth-child(4){width:20px;height:20px;left:70%;animation-delay:1s;}
-    .bubble:nth-child(5){width:45px;height:45px;left:85%;animation-delay:3s;}
-    @media (max-width:600px){h1{font-size:2rem;}h2{font-size:1.3rem;}p,ul li{font-size:0.95rem;}}
-    .legal {margin-top:20px;font-size:0.9rem;line-height:1.4;color:#103b57;}
-    .legal a {color:#c8342b;text-decoration:underline;}
+
+    .bubble {
+      position: absolute;
+      bottom: -50px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% {transform: translateY(0) scale(1);}
+      100% {transform: translateY(-120vh) scale(1.2);}
+    }
+
+    .container {
+      position: relative;
+      background: rgba(255,255,255,0.8);
+      border-radius: 20px;
+      padding: 30px 25px;
+      max-width: 800px;
+      width: 90%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+      z-index: 2;
+      margin: 40px 0;
+    }
+
+    .logo {
+      width: 150px;
+      border-radius: 0;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 10px 0;
+      color: #c8342b;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #103b57;
+      text-align: center;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #c8342b;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: rgba(255,255,255,0.6);
+      padding: 8px 12px;
+      margin: 6px 0;
+      border-left: 4px solid #c8342b;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: #0e3a56;
+      margin-top: 30px;
+      opacity: 0.7;
+      text-align: center;
+    }
+
+    .cta {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #c8342b;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #a92921;
+    }
+
+    /* Blasen */
+    .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 25px; height: 25px; left: 30%; animation-delay: 2s; }
+    .bubble:nth-child(3) { width: 35px; height: 35px; left: 50%; animation-delay: 4s; }
+    .bubble:nth-child(4) { width: 20px; height: 20px; left: 70%; animation-delay: 1s; }
+    .bubble:nth-child(5) { width: 45px; height: 45px; left: 85%; animation-delay: 3s; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.3rem; }
+      p, ul li { font-size: 0.95rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
 
   <div class="container">
     <img src="logo.png" alt="Garnelen Guide Logo" class="logo">
     <h1>Garnelen Guide</h1>
-    <p><strong>Transparenz:</strong> Diese Seite enthält <strong>Affiliate-Links</strong>. Wenn du über einen Link einkaufst, erhalten wir eine kleine Provision. Für dich ändert sich am Preis nichts. 🦐</p>
     <p>Wir bauen für dich eine moderne Plattform rund um Nano-Garnelen & Aquaristik.<br>
-    Bis dahin findest du hier schon erste Tipps ✨</p>
+    Bis dahin findest du hier schon erste Tipps 🦐✨</p>
 
     <section>
       <h2>🐣 Tipps für Anfänger</h2>
@@ -86,21 +173,6 @@
       </ul>
     </section>
 
-    <!-- Impressum & Datenschutz -->
-    <section class="legal">
-      <h2>📜 Impressum</h2>
-      <p><strong>Verantwortlich:</strong><br>
-      Max Mustermann<br>
-      Musterstraße 1<br>
-      12345 Musterstadt<br>
-      E-Mail: kontakt@garnelen-guide.de</p>
-
-      <h2>🔒 Datenschutzerklärung</h2>
-      <p>Diese Website nutzt das Amazon-Partnerprogramm. Anbieter ist die Amazon EU S.à r.l. Dabei können Cookies gesetzt werden, um die Herkunft der Bestellungen nachvollziehen zu können. Weitere Informationen findest du in der <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010" target="_blank">Amazon Datenschutzerklärung</a>.</p>
-      <p>Weitere personenbezogene Daten werden auf dieser Seite nicht erhoben.</p>
-
-      <p style="font-size:0.85rem;color:#666;">Diese Angaben dienen als Platzhalter. Bitte ersetze sie durch deine echten Daten. Nutze z. B. e-recht24.de für ein vollständiges Impressum & DSGVO-konforme Erklärung.</p>
-    </section>
 
     <footer>© 2025 Garnelen Guide – Dein Ratgeber für Nano-Garnelen & Aquaristik</footer>
   </div>
