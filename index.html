@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garnelen Guide – Wartungsmodus</title>
-<meta name="description" content="Die Webseite Garnelen Guide befindet sich derzeit im Wartungsmodus. Besuchen Sie uns später für Tipps und Informationen rund um Garnelen.">
-<meta name="robots" content="noindex, follow">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garnelen Guide – Wartungsmodus</title>
+  <meta name="description" content="Der Garnelen Guide befindet sich derzeit im Wartungsmodus. Bald findest du hier wieder spannende Inhalte rund um Garnelen und Nano-Aquaristik.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
     body {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        background: linear-gradient(135deg, #00b09b, #96c93d);
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        background-image: url('garnelen-bg.jpg'); /* Hintergrundbild hochladen */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #c8e8f5 0%, #eaf7ff 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #103b57;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -50px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% {transform: translateY(0) scale(1);}
+      100% {transform: translateY(-120vh) scale(1.2);}
     }
 
     .container {
-        max-width: 600px;
-        padding: 30px;
-        background: rgba(0,0,0,0.5);
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        backdrop-filter: blur(5px);
-        animation: fadeIn 1s ease-out;
+      position: relative;
+      text-align: center;
+      background: rgba(255,255,255,0.75);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+      z-index: 2;
     }
 
-    @keyframes fadeIn {
-        from {opacity:0; transform: translateY(-20px);}
-        to {opacity:1; transform: translateY(0);}
+    .logo {
+      width: 150px;
+      border-radius: 0;
+      margin-bottom: 15px;
     }
 
     h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        color: #ffd700;
+      font-size: 2.5rem;
+      margin: 10px 0;
+      color: #c8342b;
     }
 
     p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #103b57;
+      margin-bottom: 1.5rem;
     }
 
     .note {
-        font-size: 0.9rem;
-        opacity: 0.8;
-    }
-   
-    .logo {
-        width: 100px;
-        height: 100px;
-        border-radius: 5%;
-        border: 3px solid #fff;
-        object-fit: cover;
-        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
 
-    .shrimp {
-        width: 80px;
-        margin: 15px auto;
-        display: block;
-        animation: swim 3s infinite ease-in-out;
+    footer {
+      font-size: 0.8rem;
+      color: #0e3a56;
+      margin-top: 30px;
+      opacity: 0.7;
     }
 
-    @keyframes swim {
-        0% { transform: translateX(0) rotate(0deg);}
-        50% { transform: translateX(15px) rotate(10deg);}
-        100% { transform: translateX(0) rotate(0deg);}
-    }
+    /* Blasen generieren */
+    .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 25px; height: 25px; left: 30%; animation-delay: 2s; }
+    .bubble:nth-child(3) { width: 35px; height: 35px; left: 50%; animation-delay: 4s; }
+    .bubble:nth-child(4) { width: 20px; height: 20px; left: 70%; animation-delay: 1s; }
+    .bubble:nth-child(5) { width: 45px; height: 45px; left: 85%; animation-delay: 3s; }
 
     @media (max-width: 500px) {
-        h1 { font-size: 2rem; }
-        p { font-size: 1rem; }
+      h1 { font-size: 1.8rem; }
+      p { font-size: 1rem; }
     }
-</style>
+  </style>
 </head>
 <body>
-<div class="container">
-    <!-- Logo hochladen als logo.png -->
-    <img src="logo.png" alt="Garnelen Guide Logo" class="logo">
-    <h1>Garnelen Guide</h1>
-    <p>Unsere Webseite befindet sich derzeit im Wartungsmodus.<br>Wir sind bald wieder für Sie da!</p>
-    
-    <!-- Animierte Garnelen SVG -->
-    <svg class="shrimp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-        <path fill="#fff" d="M32 2c-4 0-7 3-7 7s3 7 7 7 7-3 7-7-3-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0 5c-7 0-13 5-13 12v5h26v-5c0-7-6-12-13-12zm-8 12c0-4 4-8 8-8s8 4 8 8v3H24v-3z"/>
-    </svg>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
 
-    <p class="note">Vielen Dank für Ihr Verständnis.</p>
-</div>
+  <div class="container">
+    <img src="logo.png" alt="Garnelen Guide Logo" class="logo">
+    <h1>Wir sind bald zurück!</h1>
+    <p>Der <strong>Garnelen Guide</strong> befindet sich momentan im Wartungsmodus.<br>
+       Bald findest du hier wieder Tipps & Inspirationen rund um Garnelen, Aquaristik & Nano-Welten.</p>
+    <p class="note">Danke für dein Verständnis und deine Geduld 🦐</p>
+    <footer>© 2025 Garnelen Guide – Alles über Nano-Garnelen & Aquaristik</footer>
+  </div>
 </body>
 </html>
